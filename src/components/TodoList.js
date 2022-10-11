@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const TodoList = ({todos, setTodos}) =>{
 
   const handleDelete = ({id})=>{
@@ -17,8 +19,12 @@ const TodoList = ({todos, setTodos}) =>{
         className="list" 
         onChange={(event) =>  event.preventDefault()}/> 
         <div>
-          <button className='button-complete task-button' onClick={()=>handleDelete(todos)}>
-            <i className='fa fa-check-circle'></i>🗑️</button>
+          <button className='button-complete task-button' >
+            <i className='fa fa-check-circle'></i></button>
+            <button className='button-edit task-button' >
+            <i className='fa fa-check-circle'></i></button>
+            <button className='button-delete task-button' onClick={()=>handleDelete(todos)} >
+            <i className='fa fa-check-circle'>🗑️</i></button>
         </div>
 
         </li>
